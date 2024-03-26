@@ -13,3 +13,7 @@ To build the project run
 ```bash
 rake
 ```
+
+# Links
+
+- https://ruby.github.io/rake/
