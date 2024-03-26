@@ -1,0 +1,19 @@
+Project default: Main {
+
+  RequiredBakeVersion minimum: "2.72.0"
+
+  Responsible {
+    Person "mikhail-tsukerman"
+  }
+
+  CustomConfig IncludeOnly {
+    IncludeDir include, inherit: true
+  }
+
+  ExecutableConfig Main {
+    Files "*.cpp"
+    Dependency config: IncludeOnly
+    DefaultToolchain GCC
+  }
+
+}

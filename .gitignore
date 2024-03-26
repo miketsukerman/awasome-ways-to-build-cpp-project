@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+# cmake 
+build
+
+# bake
+.bake
+
+# autotools
+auto4te.cache
+aclocal.m4
+configure

@@ -1,0 +1,19 @@
+require 'rake/clean'
+
+CLEAN.include('*.o')
+CLOBBER.include('*.exe')
+
+source_files = Rake::FileList["*.cpp"]
+object_files = source_files.ext(".o")
+
+desc "Build the binary executable"
+task :binary => object_files do
+    sh "gcc #{object_files} -lstdc++ -o app"
+end
+
+rule '.o' => '.cpp' do |task|
+    sh "gcc -c #{task.source}"
+end
+
+desc "rake binary"
+task :default => :binary
